@@ -1,1 +1,161 @@
-##Style file
+ /*------------------------Header and Navigation Styling*/
+ header {
+    display: block;
+    text-align: center;
+    color: #F2295F;
+    background-color: #F2A03D;
+    padding: 1em 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+ }
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item a:hover {
+    background-color: #04D99D;
+}
+
+.heading {
+    margin-top: 20px;
+}
+
+ /*---------------------------------------Style the body */
+
+ body, html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: "Hachi Maru Pop", cursive;
+    background-color: #33308C;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 90%;
+    min-height: 100vh;
+    margin-top: 70px;
+}
+
+.content-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+ /*--------------------------------------------Colors*/
+color_example {
+    color:
+    #F2295F
+    #33308C
+    #04D99D
+    #F2A03D
+    #F24130
+    /*additional borders and shadows*/
+    #FFFFFF
+    #ddd
+    #ccc
+    } 
+
+/*--------------------------------------------Container*/
+
+.game-container {
+    width: auto;
+    max-width: 100%;
+    margin:auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/*--------------------------------------------Grid for Cards*/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Keep 4x4 grid on all screens */
+    gap: 10px;
+    justify-content: center;
+}
+
+/*--------------------------------------------Cards Styling and Interaction */
+.card {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 100%; /* 1:1 Aspect ratio */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-style: preserve-3d; /* Enable 3D transformations */
+    transition: transform 0.6s;
+    transform: rotateY(0deg); /* Initially show the back */
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #F2295F; /* Color of the back of the card */
+    backface-visibility: hidden;
+    transform: rotateY(0deg); /* Rotate the back to the front when initially viewed */
+}
+
+.card.flipped {
+    transform: rotateY(180deg); /* Rotate to show the image when flipped */
+}
+
+/*--------------------------------------------Buttons*/
+button {
+    background-color: #04D99D;
+    color: #33308C;
+    margin: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #F2295F;
+}
+
+.hidden {
+    display: none;
+}
+
+/*-----------------------------------Flexible Text Sizes*/
+.status-text, p{
+    font-size: calc(10px + 1vw);
+    font-family: "Hachi Maru Pop", cursive;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+/*-----------------------------------Media*/
+@media (max-width: 600px) {
+    .navbar a {
+        font-size: 14px; /* Smaller font size for smaller screens */
+        padding: 5px; /* Smaller padding */
+    }
+    .heading {
+        font-size: 18px; /* Adjust heading size */
+    }
+}
