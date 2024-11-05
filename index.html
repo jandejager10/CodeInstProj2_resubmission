@@ -33,17 +33,20 @@
         <div class="content-wrap">
             <div class="game-container">
                 <button onclick="showInstructions()" aria-label="Show game instructions">Show Instructions</button>
+                <div id="highScore">High Score: 0</div>
                 <div class="grid" id="gameGrid"></div>
                 <span class="status-text" id="statusText">Attempts: 0 | Matches: 0</span>
                 <button id="resetButton" aria-label="Reset the game and start over">Reset Game</button>
             </div>
         </div>
 
-        <!-- Footer content -->
-        <footer>
-            <p>&copy; 2024 Jan de Jager. All rights reserved.</p>
-        </footer>
+    <!-- Footer content -->
+    <footer style="position: relative; width: 100%;">
+        <p>&copy; 2024 Jan de Jager. All rights reserved.</p>
+    </footer>
     </div>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/saveloadgamestate.js"></script>
+    <script src="./assets/js/savedisplayhighscore.js"></script>
 </body>
 </html>
