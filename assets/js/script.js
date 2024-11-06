@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize game
     function initGame() {
-        const cardNames = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+        const cardNames = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O'];
         const deck = [...cardNames, ...cardNames].sort(() => Math.random() - 0.5).map(createCard);
         deck.forEach(card => {
             card.classList.remove('flipped');
