@@ -1,9 +1,10 @@
-// localStorage
-function saveGameState(attempts, matches, cardStates) {
+// saveloadgamestate.js
+
+function saveGameState() {
     const gameState = {
         attempts: attempts,
         matches: matches,
-        cardStates: cardStates  // This could be an array of card states, e.g., flipped or unflipped
+        cardStates: cardStates
     };
     localStorage.setItem('gameState', JSON.stringify(gameState));
 }
@@ -23,12 +24,9 @@ function loadGameState() {
     }
 }
 
-// Clear game state on game reset
 function resetGameState() {
     localStorage.removeItem('gameState');
 }
 
-// autoSave
-window.addEventListener('beforeunload', () => {
-    saveGameState(attempts, matches, cardStates);
-});
+// Automatically save the game state when the page is unloaded
+window.addEventListener('beforeunload', saveGameState);
