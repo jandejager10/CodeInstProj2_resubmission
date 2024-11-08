@@ -11,3 +11,12 @@
     - **Instructions Pop-up**: Check that the instructions button displays an alert with instructions for gameplay.
     - **Responsive Design**: Verify the grid layout, buttons, and text scale appropriately on different screen sizes, especially on mobile.
     - **Navigation**: Ensure the "Home" and "Contact" links function correctly and that both pages are styled consistently.
+
+
+
+    **Shuffling**
+    - Test that the cards are shuffled randomly since I added more cards.
+    - const deck = [...pairs, ...pairs].sort(() => Math.random() - 0.5).map(createCard); "https://stackoverflow.com/questions/64370139/codewars-permutations-kata-sort-method-that-returns-0-5-math-random"
+
+
+    

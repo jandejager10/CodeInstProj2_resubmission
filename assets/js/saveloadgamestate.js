@@ -1,5 +1,4 @@
-// saveloadgamestate.js
-
+// Function to save and load the game state
 function saveGameState() {
     const gameState = {
         attempts: attempts,

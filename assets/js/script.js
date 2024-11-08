@@ -119,22 +119,31 @@ document.addEventListener('DOMContentLoaded', () => {
         initGame();
     }
 
+    // Helper function to randomly select a subset of pairs from available card names
+    function getRandomPairs(numPairs) {
+        const cardNames = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O'];
+        const shuffled = cardNames.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, numPairs);
+    }
+
     // Initialize game with level-based grid and pairs
     function initGame() {
-        const cardNames = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O'];
-        let pairs;
+        let numPairs;
 
-        // Select pairs based on level
+        // Determine the number of pairs based on the level
         if (level === 1) {
-            pairs = cardNames.slice(0, 2); // 2 pairs (4 cards) for a 2x2 grid
+            numPairs = 2; // 2 pairs (4 cards) for a 2x2 grid
         } else if (level === 2) {
-            pairs = cardNames.slice(0, 3); // 3 pairs (6 cards) for a 3x2 grid
+            numPairs = 3; // 3 pairs (6 cards) for a 3x2 grid
         } else {
-            pairs = cardNames.slice(0, 8); // 8 pairs (16 cards) for a 4x4 grid
+            numPairs = 8; // 8 pairs (16 cards) for a 4x4 grid
         }
 
         // Set the grid size based on level
         setGridSize(level);
+
+        // Get a random selection of pairs
+        const pairs = getRandomPairs(numPairs);
 
         // Create and shuffle the deck
         const deck = [...pairs, ...pairs].sort(() => Math.random() - 0.5).map(createCard);
