@@ -1,3 +1,4 @@
+/* esversion: 6 */
 // Define variables globally to make them accessible in saveloadgamestate.js
 let attempts = 0;
 let matches = 0;

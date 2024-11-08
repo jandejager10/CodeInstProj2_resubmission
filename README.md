@@ -33,18 +33,18 @@ This coding project is a Kawaii-themed Memory Game implemented with HTML, CSS, a
 
 1.  **Game Enhancements**:
     
-    - **Difficulty Levels**: Add options for different grid sizes (3x3, 4x4, 5x5) to adjust game difficulty.
+    - **Difficulty Levels**: Add options for different grid sizes (2x2, 2x3, 4x4) to adjust game difficulty.
     - **Scoring System**: Implement a points system based on attempts or time taken to finish the game, allowing players to challenge themselves.
     - **Animations and Sound Effects**: Add animations and sound effects for card flips, matches, and completion, making the game more engaging.
 2.  **UI Improvements**:
     
     - **Loading Animation**: Display a loading animation while the game initializes, especially for slower networks.
-    - **Feedback on Victory**: Once all pairs are matched, display a congratulatory message or graphic.
-    - **Theme Variations**: Provide an option for players to switch between themes, changing card designs and background colors.
+    - **Feedback on Victory**: Once all pairs are matched, display a congratulatory message or graphic.(Future Development)
+    - **Theme Variations**: Provide an option for players to switch between themes, changing card designs and background colors.(Future development)
 3.  **Game Data Persistence**:
     
     - **Save Progress**: Allow players to save progress or attempt tracking across sessions using local storage, so they can resume later.
-    - **Leaderboard**: Implement a leaderboard showing top scores for various difficulties, adding a competitive aspect to the game.
+    - **Leaderboard**: Implement a leaderboard showing top scores for various difficulties, adding a competitive aspect to the game. (future development)
 
 ### Data Persistence with localStorage
 
@@ -102,7 +102,7 @@ Instructions Button: A button that, when clicked, displays a modal or popup with
 Game Grid: A 4x4 grid where the game cards will be placed.
 Status Text: Below the grid, showing the number of attempts and matches.
 Reset Game Button: An option to restart the game at any time.
-![Layout Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/wireframe.png)
+![Layout Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/img/wireframe.png)
 Mockup with [amiresponsive](https://ui.dev/amiresponsive)
 Reminders
 keep track of time

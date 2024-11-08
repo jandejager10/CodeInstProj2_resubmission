@@ -72,7 +72,6 @@
 /*--------------------------------------------Grid for Cards*/
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Keep 4x4 grid on all screens */
     gap: 10px;
     justify-content: center;
 }
