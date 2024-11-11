@@ -85,4 +85,7 @@ No errors highlighted.
 No errors highlighted. 
 </p>
 
-    
+**Conclusion:**
+
+The game is fully functional and responsive to different screen sizes. The game state is saved and loaded correctly. The game is accessible via keyboard navigation. The game is responsive to different screen sizes. The game is compatible with different browsers. The HTML code is valid. The CSS code is valid.
+
