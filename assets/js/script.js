@@ -8,6 +8,8 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 let startTime;
+let selectedCardIndex = 0; // Track the currently selected card index
+const cards = []; // Array to hold card elements
 
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.getElementById('gameGrid');
@@ -156,7 +158,64 @@ document.addEventListener('DOMContentLoaded', () => {
         updateStatusText();
         loadGameState(); // Load saved game state if available
         startTime = new Date();
+
+        cards.length = 0; // Clear the cards array
+        const cardElements = grid.children;
+        for (let i = 0; i < cardElements.length; i++) {
+            cards.push(cardElements[i]); // Populate the cards array
+        }
+        updateSelectedCard();
     }
+
+    // Update the visual indication of the selected card
+    function updateSelectedCard() {
+        cards.forEach((card, index) => {
+            card.classList.remove('selected'); // Remove selection from all cards
+            if (index === selectedCardIndex) {
+                card.classList.add('selected'); // Add selection to the currently selected card
+            }
+        });
+    }
+
+    // Handle keyboard controls
+    function handleKeyPress(event) {
+        switch (event.key) {
+            case 'ArrowRight':
+                selectedCardIndex = (selectedCardIndex + 1) % cards.length; // Move right
+                updateSelectedCard();
+                break;
+            case 'ArrowLeft':
+                selectedCardIndex = (selectedCardIndex - 1 + cards.length) % cards.length; // Move left
+                updateSelectedCard();
+                break;
+            case 'Enter':
+                flipSelectedCard(); // Flip the selected card
+                break;
+            case 'r':
+            case 'R':
+                resetGame(); // Reset the game
+                break;
+        }
+    }
+
+    // Flip the currently selected card
+    function flipSelectedCard() {
+        const selectedCard = cards[selectedCardIndex];
+        if (!lockBoard && !selectedCard.classList.contains('flipped')) {
+            selectedCard.classList.add('flipped');
+            cardStates.push({ name: selectedCard.dataset.name, flipped: true });
+            if (!hasFlippedCard) {
+                hasFlippedCard = true;
+                firstCard = selectedCard;
+            } else {
+                secondCard = selectedCard;
+                checkForMatch();
+            }
+        }
+    }
+
+    // Add event listener for key presses
+    document.addEventListener('keydown', handleKeyPress);
 
     initGame();
     document.getElementById('resetButton').addEventListener('click', resetGame);

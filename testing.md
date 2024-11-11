@@ -1,11 +1,25 @@
-### Test Cases
+### Testing Overview
+
+**Purpose of Testing:**
+The purpose of testing is to ensure that the game functions correctly and is responsive to different screen sizes.
+
+**Testing Methodology:**
+The types of testing performed is manual, including the tools: JSLint for JavaScript linting, HTML and CSS validation tools.
+
+**Testing Results:**
 
 1.  **Game Functionality**
     
-    - **Card Flip**: Test that each card flips upon click and reveals the image. &#x2611;
-    - **Matching Mechanism**: Ensure that a pair of matching cards stays flipped while unmatched pairs revert to their hidden state. &#x2611;
-    - **Game Reset**: Verify that clicking the reset button resets the game grid, shuffles cards, and updates the status to zero attempts and matches. &#x2611;
-    - **Victory Condition**: Test that all pairs being matched triggers a message or visual indicator that the game is complete. &#x2611;
+| Feature                | Test Case                                                     | Expected Outcome                       | Pass/Fail |
+|------------------------|---------------------------------------------------------------|----------------------------------------|-----------|
+| **Game Start**         | Load game page                                               | Game grid displays with correct layout | Pass      |
+| **Card Flip**          | Click on a card                                              | Card flips to reveal image             | Pass      |
+| **Match Check**        | Flip two matching cards                                       | Both cards stay visible                | Pass      |
+| **Level Progression**  | Complete a level                                             | Game advances to next level grid       | Pass      |
+| **High Score Tracking**| Complete game and check high score                           | High score displays in UI              | Pass      |
+| **Responsive Design**  | Open game on various screen sizes (mobile, tablet, desktop)  | Layout adjusts without overlap         | Pass      |
+| **Save Game State**    | Exit and reload the page                                     | Game continues from last state         | Pass      |
+
 2.  **UI and UX**
     
     - **Instructions Pop-up**: Check that the instructions button displays an alert with instructions for gameplay. &#x2611;
@@ -26,6 +40,15 @@
 
     - I added aria-labels to all the buttons and links. &#x2611;
     - Not done for the images. &#x2612;
+    - Keyboard Navigation: Verify that all elements are accessible via keyboard-only navigation. &#x2611;
+        - I added keyboard navigation to the game.
+        - This implementation allows players to control the game using the keyboard, enhancing accessibility and user experience.:
+            - I can navigate to the game grid left and right with arow keys and flip cards with the enter key. To move to the next row, just continue left or right.
+            - Arrow Keys: Navigate through the cards. Left and right arrow keys.
+            - Enter Key: Flip the selected card.
+            - R Key: Reset the game.
+    - Screen Reader Compatibility: Confirm that screen readers can announce instructions, card content, and feedback messages. &#9746;
+    - Color Contrast: Ensure that color choices are accessible to visually impaired users. &#9746;
 7. **Responsiveness**
 
     - Test that the game is responsive to different screen sizes. &#x2611;

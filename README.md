@@ -83,7 +83,7 @@ This coding project is a Kawaii-themed Memory Game implemented with HTML, CSS, a
 You only need a modern web browser to run the game. The game is tested on Google Chrome, Mozilla Firefox, and Safari.
 
 **Installation**<br>
-No installation is necessary. Simply clone the repository to your local machine or download as a ZIP file. git clone https://github.com/jandejager10/CodInstProj2.git Navigate to the project directory and open index.html in your web browser to start playing the game.
+No installation is necessary. Simply clone the repository to your local machine or download as a ZIP file. git clone https://github.com/jandejager10/CodeInstProj2_resubmission.git Navigate to the project directory and open index.html in your web browser to start playing the game.
 
 ### How to Play
 - Start the Game: Open the `index.html` file in a web browser.
@@ -117,11 +117,6 @@ Media (images and animations)
 All them pictures have got to come from somewhere afterall:
 Pictures / Photos from https://stock.adobe.com/
 Favicon - https://icons8.com/
-Release History
-28/03/2024 - Conserted effort start.
-21/04/2024 - Final Submission Date.
-TESTING:
-
 
 
 Contact
